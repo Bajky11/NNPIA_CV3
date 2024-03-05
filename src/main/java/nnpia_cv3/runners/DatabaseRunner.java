@@ -49,13 +49,13 @@ public class DatabaseRunner implements CommandLineRunner {
 
         Task task1 = new Task();
         task1.setTitle("Uklid");
-        task1.setAuthorId(user1);
+        task1.setAuthor(user1);
         Task task2 = new Task();
         task2.setTitle("odpocinek");
-        task2.setAuthorId(user1);
+        task2.setAuthor(user1);
         Task task3 = new Task();
         task3.setTitle("straz");
-        task3.setAuthorId(user1);
+        task3.setAuthor(user1);
         taskRepository.save(task1);
         taskRepository.save(task2);
         taskRepository.save(task3);
@@ -82,13 +82,6 @@ public class DatabaseRunner implements CommandLineRunner {
         appUserRoleRepository.save(appUserRole1);
         appUserRoleRepository.save(appUserRole2);
         appUserRoleRepository.save(appUserRole3);
-
-
-    }
-
-    public List<String> findAllusernames(){
-        List<String> usernames = appUserRepository.findAllUsernames();
-        return usernames;
     }
 }
 

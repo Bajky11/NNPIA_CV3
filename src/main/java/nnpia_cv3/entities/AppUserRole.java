@@ -16,8 +16,10 @@ public class AppUserRole {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @ManyToOne
+    @JoinColumn(name = "appUsers")
     public AppUser appUser;
     @ManyToOne
+    @JoinColumn(name = "roles")
     public Role role;
 
 }

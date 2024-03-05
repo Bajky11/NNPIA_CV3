@@ -16,16 +16,23 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     @Column
     private String title;
+
     @Column
     private String text;
+
     @Column
     private String description;
+
     @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime creation_date;
+
     @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime update_date;
+
     @ManyToOne
-    public AppUser authorId;
+    @JoinColumn(name="author_id")
+    public AppUser author;
 }

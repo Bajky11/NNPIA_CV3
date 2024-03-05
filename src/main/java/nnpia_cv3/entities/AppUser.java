@@ -41,10 +41,13 @@ public class AppUser {
     private Date creation_date;
     @Column
     private Date updateDate;
-    @OneToMany(mappedBy = "authorId")
+
+    @OneToMany(mappedBy = "author")
     public List<Task> tasks;
+
+
     @OneToMany(mappedBy = "appUser")
-    public List<AppUserRole> appUserRoles;
+    public List<AppUserRole> appUsers;
 
 
 }
