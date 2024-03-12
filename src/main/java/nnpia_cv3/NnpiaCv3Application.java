@@ -10,6 +10,7 @@ public class NnpiaCv3Application {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
+    //test
 
     public static void main(String[] args) {
         SpringApplication.run(NnpiaCv3Application.class, args);
